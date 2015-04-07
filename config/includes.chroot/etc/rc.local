@@ -1,2 +1,0 @@
-echo 1 > /sys/class/rkwifi/driver
-ifconfig wlan0 up
