@@ -1,0 +1,3 @@
+echo 1 > /sys/class/rfkill/rfkill0/state
+brcm_patchram_plus --patchram /system/vendor/firmware/bcm4339a0.hcd --baudrate 1500000 --enable_lpm --enable_hci --no2bytes /dev/ttyS0 &
+
