@@ -1,0 +1,8 @@
+mate-core
+mate-desktop-environment
+mate-desktop-environment-extra
+lightdm
+
+bluez
+python3-dbus
+python3
