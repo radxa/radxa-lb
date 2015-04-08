@@ -7,14 +7,25 @@ GENERAL_BUILD_OPTIONS = \
 	--apt-secure false \
 	--apt-source-archives false \
 	--archive-areas 'main contrib non-free' \
-	--bootappend-live "boot=live config hostname=rabian username=rock" \
+	--bootappend-live "boot=live config hostname=rock username=rock" \
 	--bootstrap-flavour minimal \
-	--cache-stages false \
+	--cache true \
+	--cache-indices true \
+	--cache-packages true \
+	--cache-stages bootstrap \
+	--checksums md5 \
 	--compression gzip \
 	--distribution jessie \
 	--gzip-options '-9 --rsyncable' \
 	--mode debian \
 	--security false
+
+FILESYSTEM_OPTIONS = \
+	--binary-filesystem ext4 \
+	--chroot-filesystem ext4 \
+	--binary-images tar \
+	--initramfs live-boot \
+	--system live
 
 BUILD_OPTIONS = \
 	--architectures armhf \
@@ -30,6 +41,7 @@ rock%:
 	cd DEBIAN && \
 	env LB_BOOTSTRAP_INCLUDE="apt-transport-https gnupg" \
 		lb config $(GENERAL_BUILD_OPTIONS) \
+			$(FILESYSTEM_OPTIONS) \
 			$(BUILD_OPTIONS)
 
 	@cp -f config/archives/* DEBIAN/config/archives
@@ -48,27 +60,26 @@ rock%:
 	@rm -fr chroot/tmp/*
 	@echo -e "\033[31mrootfs.ext4 in $(CURDIR)/rootfs.ext4\033[0m" 1>&2
 
+usage:
+	@echo "make: *** [usage] choice the target board!"
+
 clean:
-	@rm -f build.log rootfs.ext4
-	@rm -f DEBIAN/config/binary \
-	DEBIAN/config/bootstrap \
-	DEBIAN/config/chroot \
-	DEBIAN/config/common \
-	DEBIAN/config/source
-	@rm -rf config
+	[ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean
+	@rm -f $(BUILD_LOG) rootfs.ext4
+	@rm -rf DEBIAN/config config
 
 distclean:
-	@rm -f build.log rootfs.ext4
+	@rm -f $(BUILD_LOG) rootfs.ext4
 	@rm -rf DEBIAN
 	@rm -rf config
 
 help:
 	@echo " ------------------------------------------	"
-	@echo "			radxa live build					"
+	@echo "			radxa live build		"
 	@echo " ------------------------------------------	"
-	@echo " Build a custom live Debian.					"
+	@echo " Build a custom live Debian.			"
 	@echo " Usage:"
-	@echo " make			- generate rootfs.ext4		"
-	@echo " make help		- get more info				"
-	@echo " make clean		- delete some build files	"
+	@echo " make			- generate rootfs.ext4	"
+	@echo " make help		- get more info		"
+	@echo " make clean		- delete build files	"
 	@echo " make distclean	- recover to original state	"
