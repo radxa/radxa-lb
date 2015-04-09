@@ -3,7 +3,7 @@
 echo "remove unused packages"
 
 apt-get remove -y --purge aptitude
-apt-get remove -y --purge nano
+apt-get remove -y --purge pulseaudio
 apt-get remove -y --purge manpages
 apt-get remove -y --purge iptables
 
