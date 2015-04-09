@@ -44,11 +44,11 @@ rock%:
 			$(FILESYSTEM_OPTIONS) \
 			$(BUILD_OPTIONS)
 
+	@echo "I: copy customization"
 	@cp -f config/archives/* DEBIAN/config/archives
 	@cp -Rf config/includes.chroot/* DEBIAN/config/includes.chroot
 	@cp -f config/hooks/* DEBIAN/config/hooks
 	@cp -f config/package-lists/* DEBIAN/config/package-lists
-	@cp -f config/packages.chroot/* DEBIAN/config/packages.chroot
 	@cp -f config/bootstrap DEBIAN/config
 	@cp -f config/chroot DEBIAN/config
 
@@ -70,6 +70,7 @@ clean:
 	@rm -rf DEBIAN/config config
 
 distclean:
+	[ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean --purge
 	@rm -f $(BUILD_LOG) rootfs.ext4
 	@rm -rf DEBIAN
 	@rm -rf config
