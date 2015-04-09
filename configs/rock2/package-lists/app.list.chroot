@@ -6,10 +6,10 @@ locales
 ###browser
 chromium-codecs-ffmpeg-extra
 chromium-browser
+libpepflashplayer
 
 ###tools
 sudo
-vim
 ntp
 ssh
 wireless-tools
