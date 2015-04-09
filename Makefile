@@ -48,6 +48,7 @@ rock%:
 	@cp -Rf config/includes.chroot/* DEBIAN/config/includes.chroot
 	@cp -f config/hooks/* DEBIAN/config/hooks
 	@cp -f config/package-lists/* DEBIAN/config/package-lists
+	@cp -f config/packages.chroot/* DEBIAN/config/packages.chroot
 	@cp -f config/bootstrap DEBIAN/config
 	@cp -f config/chroot DEBIAN/config
 
