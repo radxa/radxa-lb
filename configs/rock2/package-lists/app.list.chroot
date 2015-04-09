@@ -1,12 +1,13 @@
+###fonts
 fonts-wqy-microhei
 fonts-wqy-zenhei
 locales
 
+###browser
 chromium-codecs-ffmpeg-extra
-libgcrypt11
 chromium-browser
 
-wicd-gtk
+###tools
 sudo
 vim
 ntp

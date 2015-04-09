@@ -1,8 +1,12 @@
+###desktop
 mate-core
 mate-desktop-environment
 mate-desktop-environment-extra
 lightdm
 
+###protocol stack
 bluez
+
+###IPC
 python3-dbus
 python3
