@@ -3,10 +3,8 @@
 echo "remove unused packages"
 
 apt-get remove -y --purge aptitude
-apt-get remove -y --purge libg11-mesa-dri
 apt-get remove -y --purge nano
 apt-get remove -y --purge manpages
-apt-get remove -y --purge openbox-themes
 apt-get remove -y --purge iptables
 
 apt-get -y autoremove
