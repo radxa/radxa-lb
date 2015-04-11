@@ -1,8 +1,9 @@
 .PHONY: lb_config lb_build clean distclean help
 
-BUILD_LOG := build.log
+BUILD_LOG := live-build.log
 
 GENERAL_BUILD_OPTIONS = \
+	--apt apt \
 	--apt-indices none \
 	--apt-secure false \
 	--apt-source-archives false \
