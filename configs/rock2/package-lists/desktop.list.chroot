@@ -11,6 +11,3 @@ bluez
 ###IPC
 python3-dbus
 python3
-
-###system overlay
-rock2-overlay
