@@ -1,0 +1,2 @@
+deb http://http.debian.net/debian/ jessie main
+deb http://apt.radxa.us/debian/ jessie main
