@@ -1,4 +1,5 @@
 .PHONY: lb_config lb_build clean distclean help
+.PHONY: rock rock_pro rock_lite rock2_square
 
 BUILD_LOG := live-build.log
 
@@ -36,8 +37,9 @@ BUILD_OPTIONS = \
 	--firmware-binary false \
 	--firmware-chroot falsall: lb_config lb_build
 
-rock%:
-	@ln -sf configs/$@ config
+rock rock_pro rock_lite rock2_square:
+	rm -f config
+	ln -sf $@ config
 	[ -e DEBIAN ] || mkdir DEBIAN
 	cd DEBIAN && \
 	env LB_BOOTSTRAP_INCLUDE="apt-transport-https gnupg" \

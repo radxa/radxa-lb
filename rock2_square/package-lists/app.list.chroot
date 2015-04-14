@@ -1,0 +1,25 @@
+###fonts
+fonts-wqy-microhei
+fonts-wqy-zenhei
+locales
+
+###browser
+chromium-browser
+
+###tools
+sudo
+ntp
+ssh
+wireless-tools
+blueman
+bluetooth
+module-init-tools
+usbutils
+wpasupplicant
+network-manager-gnome
+network-manager
+
+#pre packages
+libpepflashplayer
+linux-image-3.10.0-rock2-square
+rock2-overlay
