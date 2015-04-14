@@ -62,14 +62,14 @@ rock rock_pro rock_lite rock2_square:
 	@rm -fr chroot/var/log/*
 	@rm -fr chroot/var/cache/apt/archives/*
 	@rm -fr chroot/tmp/*
-	@echo -e "\033[31mrootfs.ext4 in $(CURDIR)/rootfs.ext4\033[0m" 1>&2
+	@echo -e "\033[31mrootfs.ext4 in $(CURDIR)/rootfs_$@.ext4\033[0m" 1>&2
 
 usage:
 	@echo "make: *** [usage] choice the target board!"
 
 clean:
 	[ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean
-	@rm -f $(BUILD_LOG) rootfs.ext4
+	@rm -f $(BUILD_LOG) rootfs_*.ext4
 	@rm -rf DEBIAN/config config
 
 distclean:
