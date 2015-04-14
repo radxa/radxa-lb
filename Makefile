@@ -56,7 +56,7 @@ rock rock_pro rock_lite rock2_square:
 	@cp -f config/chroot DEBIAN/config
 
 	( cd DEBIAN && sudo lb build ) 2>&1 | tee $(BUILD_LOG)
-	@cp -f DEBIAN/binary/live/filesystem.ext4 ./rootfs.ext4
+	@cp -f DEBIAN/binary/live/filesystem.ext4 ./rootfs_$@.ext4
 
 	@rm -fr chroot/root/.bash_history
 	@rm -fr chroot/var/log/*
