@@ -3,8 +3,6 @@
 echo "remove unused packages"
 
 apt-get remove -y --purge aptitude
-apt-get remove -y --purge manpages
-apt-get remove -y --purge iptables
 
 apt-get -y autoremove
 apt-get -y clean
@@ -23,7 +21,3 @@ echo "remove apt cache"
 rm -rf /var/cache/apt/*.bin
 
 locale-gen
-
-if cd /usr/share/locale;then
-	ls -1|grep -v zh_CN|grep -v locale|xargs rm -rf "{}"
-fi
