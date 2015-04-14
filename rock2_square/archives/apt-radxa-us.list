@@ -1,1 +1,1 @@
-deb http://172.168.1.3/apt.radxa.us/rabian-testing/ jessie main
+deb http://172.168.1.3/apt.radxa.us/rabian-stable/ jessie main
