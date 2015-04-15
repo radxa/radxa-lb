@@ -2,12 +2,6 @@
 
 echo "remove unused packages"
 
-apt-get remove -y --purge aptitude
-apt-get remove -y --purge pulseaudio
-
-apt-get -y autoremove
-apt-get -y clean
-
 rm -rf /var/cache/flash*
 echo "remvoe all docs"
 rm -rf /usr/share/doc/*
@@ -19,6 +13,6 @@ echo "remove apt lists"
 rm -rf /var/lib/apt/lists/*
 
 echo "remove apt cache"
-rm -rf /var/cache/apt/*.bin
+rm -rf /var/cache/apt/*
 
 locale-gen
