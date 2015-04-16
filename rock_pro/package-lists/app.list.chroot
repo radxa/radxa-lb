@@ -4,6 +4,7 @@ fonts-wqy-zenhei
 locales
 
 ###browser
+vim-tiny
 chromium-browser
 
 ###tools

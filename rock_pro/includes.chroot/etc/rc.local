@@ -13,5 +13,6 @@
 
 # Generate the SSH keys if non-existent
 test -f /etc/ssh/ssh_host_dsa_key || dpkg-reconfigure openssh-server
+/bin/radxa-wlist-init
 /etc/clnproxy.sh
 exit 0
