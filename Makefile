@@ -27,7 +27,8 @@ FILESYSTEM_OPTIONS = \
 	--chroot-filesystem ext4 \
 	--binary-images tar \
 	--initramfs live-boot \
-	--system live
+	--system live \
+	--initsystem systemd
 
 BUILD_OPTIONS = \
 	--architectures armhf \
