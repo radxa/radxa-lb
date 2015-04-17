@@ -13,6 +13,7 @@ echo "remove apt lists"
 rm -rf /var/lib/apt/lists/*
 
 echo "remove apt cache"
-rm -rf /var/cache/apt/*
+rm -rf /var/cache/apt/*.bin
+rm -rf /var/cache/apt/archives/*.deb
 
 locale-gen
