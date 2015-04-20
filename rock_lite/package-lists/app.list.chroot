@@ -25,4 +25,4 @@ synaptic
 #pre packages
 libpepflashplayer
 linux-image-3.0.36-rock-lite
-rock2-overlay
+rock-lite-overlay
