@@ -42,7 +42,7 @@ BUILD_OPTIONS = \
 rock rock_pro rock_lite rock2_square:
 	rm -f config
 	ln -sf $@ config
-	[ -e DEBIAN ] || mkdir DEBIAN
+	$(shell [ -e DEBIAN ] || mkdir DEBIAN)
 	cd DEBIAN && \
 	env LB_BOOTSTRAP_INCLUDE="apt-transport-https gnupg" \
 		lb config $(GENERAL_BUILD_OPTIONS) \
@@ -70,12 +70,12 @@ usage:
 	@echo "make: *** [usage] choice the target board!"
 
 clean:
-	[ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean
+	$(shell [ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean)
 	@rm -f $(BUILD_LOG) rootfs_*.ext4
 	@rm -rf DEBIAN/config config
 
 distclean:
-	[ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean --purge
+	$(shell [ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean --purge)
 	@rm -f $(BUILD_LOG) rabian_*.ext4
 	@rm -rf DEBIAN
 	@rm -rf config
