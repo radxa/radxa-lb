@@ -70,7 +70,7 @@ usage:
 	@echo "make: *** [usage] choice the target board!"
 
 clean:
-	$(shell [ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean)
+	if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi
 	@rm -f $(BUILD_LOG) rootfs_*.ext4
 	@rm -rf DEBIAN/config config
 
