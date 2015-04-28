@@ -75,7 +75,7 @@ clean:
 	@rm -rf DEBIAN/config config
 
 distclean:
-	$(shell [ -e DEBIAN/ ] && cd DEBIAN/ && sudo lb clean --purge)
+	if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi
 	@rm -f $(BUILD_LOG) rabian_*.ext4
 	@rm -rf DEBIAN
 	@rm -rf config
