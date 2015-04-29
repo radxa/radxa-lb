@@ -25,4 +25,4 @@ synaptic
 #pre packages
 libpepflashplayer
 linux-image-3.10.0-rock2-square
-rock2-overlay
+rock2-square-overlay
