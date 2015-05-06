@@ -40,10 +40,10 @@ BUILD_OPTIONS = \
 	--firmware-chroot falsall: lb_config lb_build
 
 rock rock_pro rock_lite rock2_square:
-	rm -f config
-	ln -sf $@ config
-	$(shell [ -e DEBIAN ] || mkdir DEBIAN)
-	cd DEBIAN && \
+	@rm -f config
+	@ln -sf $@ config
+	@if [ ! -e DEBIAN/ ]; then mkdir DEBIAN; fi;
+	@cd DEBIAN && \
 	env LB_BOOTSTRAP_INCLUDE="apt-transport-https gnupg" \
 		lb config $(GENERAL_BUILD_OPTIONS) \
 			$(FILESYSTEM_OPTIONS) \
@@ -70,12 +70,12 @@ usage:
 	@echo "make: *** [usage] choice the target board!"
 
 clean:
-	if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi
+	@if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi;
 	@rm -f $(BUILD_LOG) rootfs_*.ext4
 	@rm -rf DEBIAN/config config
 
 distclean:
-	if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi
+	@if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi;
 	@rm -f $(BUILD_LOG) rabian_*.ext4
 	@rm -rf DEBIAN
 	@rm -rf config
