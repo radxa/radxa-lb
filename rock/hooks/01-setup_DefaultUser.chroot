@@ -37,8 +37,8 @@ do_setup_sudoers() {
 }
 
 GROUPS_TO_ADD=
-GROUPS_TO_ADD="admin adm dialout cdrom plugdev audio dip video"
-GROUPS_TO_JOIN="admin,adm,dialout,cdrom,plugdev,audio,dip,video,sudo"
+GROUPS_TO_ADD="admin adm dialout cdrom plugdev audio pulse pulse-access dip video"
+GROUPS_TO_JOIN="admin,adm,dialout,cdrom,plugdev,audio,pulse,pulse-access,dip,video,sudo"
 for GROUP_TO_ADD in $GROUPS_TO_ADD ; do
     do_setup_group $GROUP_TO_ADD
 done
