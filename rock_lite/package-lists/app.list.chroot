@@ -9,6 +9,7 @@ chromium-browser
 
 ###tools
 gnome-mplayer
+pavucontrol
 whiptail
 sudo
 ntp
