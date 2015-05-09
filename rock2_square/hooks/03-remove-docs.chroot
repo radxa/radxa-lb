@@ -3,6 +3,7 @@
 echo "remove unused packages"
 
 apt-get remove pulseaudio -y
+apt-get --reinstall install openssh-server openssh-client
 
 rm -rf /var/cache/flash*
 echo "remvoe all docs"
