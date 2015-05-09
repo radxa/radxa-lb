@@ -14,6 +14,7 @@ whiptail
 sudo
 ntp
 ssh
+alsa-utils
 wireless-tools
 blueman
 bluetooth
