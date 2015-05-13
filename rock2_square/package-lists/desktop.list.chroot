@@ -6,7 +6,7 @@ lightdm
 systemd-sysv
 
 ###protocol stack
-bluez-debian
+bluez
 
 ###IPC
 python3-dbus
