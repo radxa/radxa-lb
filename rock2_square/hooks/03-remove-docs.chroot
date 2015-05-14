@@ -3,11 +3,13 @@
 echo "remove unused packages"
 
 apt-get remove pulseaudio -y
-apt-get --reinstall install openssh-server openssh-client
-apt-get remove pulseaudio -y
 apt-get install bluez -y
 apt-get install blueman -y
 apt-get install bluetooth -y
+
+###ssh key gen
+ssh-keygen -t dsa -P '' -f  /etc/ssh/ssh_host_dsa_key
+ssh-keygen -t rsa -P '' -f  /etc/ssh/ssh_host_rsa_key
 
 rm -rf /var/cache/flash*
 echo "remvoe all docs"

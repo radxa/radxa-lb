@@ -13,6 +13,8 @@ whiptail
 sudo
 ntp
 ssh
+openssh-server
+openssh-client
 alsa-utils
 wireless-tools
 module-init-tools
