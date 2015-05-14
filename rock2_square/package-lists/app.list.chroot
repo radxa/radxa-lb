@@ -15,8 +15,6 @@ ntp
 ssh
 alsa-utils
 wireless-tools
-blueman
-bluetooth
 module-init-tools
 usbutils
 wpasupplicant

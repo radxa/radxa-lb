@@ -5,9 +5,6 @@ mate-desktop-environment-extra
 lightdm
 systemd-sysv
 
-###protocol stack
-bluez
-
 ###IPC
 python3-dbus
 python3
