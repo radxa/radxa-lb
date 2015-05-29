@@ -18,6 +18,7 @@ openssh-client
 alsa-utils
 wireless-tools
 module-init-tools
+mate-media-gstreamer
 usbutils
 wpasupplicant
 network-manager-gnome

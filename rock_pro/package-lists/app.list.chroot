@@ -21,6 +21,7 @@ wireless-tools
 blueman
 bluetooth
 module-init-tools
+mate-media-gstreamer
 usbutils
 wpasupplicant
 network-manager-gnome
