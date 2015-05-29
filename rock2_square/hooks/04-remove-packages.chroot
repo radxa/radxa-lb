@@ -2,9 +2,18 @@
 
 echo "remove unused packages"
 
+apt-get remove pulseaudio -y
+<<<<<<< HEAD:rock2_square/hooks/03-remove-docs.chroot
+apt-get install bluez -y
+apt-get install blueman -y
+apt-get install bluetooth -y
+
 ###ssh key gen
 ssh-keygen -t dsa -P '' -f  /etc/ssh/ssh_host_dsa_key
 ssh-keygen -t rsa -P '' -f  /etc/ssh/ssh_host_rsa_key
+=======
+apt-get remove mate-power-manager -y
+>>>>>>> reclassify && remove power-manager icon:rock2_square/hooks/04-remove-packages.chroot
 
 rm -rf /var/cache/flash*
 echo "remvoe all docs"
@@ -19,5 +28,3 @@ rm -rf /var/lib/apt/lists/*
 echo "remove apt cache"
 rm -rf /var/cache/apt/*.bin
 rm -rf /var/cache/apt/archives/*.deb
-
-locale-gen
