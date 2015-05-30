@@ -1,14 +1,11 @@
 #!/bin/sh
 
 echo "remove unused packages"
+apt-get remove mate-power-manager -y
 
-<<<<<<< HEAD:rock/hooks/03-remove-docs.chroot
 ###ssh key gen
 ssh-keygen -t dsa -P '' -f  /etc/ssh/ssh_host_dsa_key
 ssh-keygen -t rsa -P '' -f  /etc/ssh/ssh_host_rsa_key
-=======
-apt-get remove mate-power-manager -y
->>>>>>> reclassify && remove power-manager icon:rock/hooks/04-remove-packages.chroot
 
 rm -rf /var/cache/flash*
 echo "remvoe all docs"
