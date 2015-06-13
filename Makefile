@@ -1,5 +1,5 @@
 .PHONY: lb_config lb_build clean distclean help
-.PHONY: rock rock_pro rock_lite rock2_square
+.PHONY: rock rock_pro rock_lite rock2_square rock_sdcard rock_pro_sdcard
 
 BUILD_LOG := live-build.log
 GIT_REV=$(shell git rev-parse --short HEAD)
@@ -39,7 +39,7 @@ BUILD_OPTIONS = \
 	--firmware-binary false \
 	--firmware-chroot falsall: lb_config lb_build
 
-rock rock_pro rock_lite rock2_square:
+rock rock_pro rock_lite rock2_square rock_sdcard rock_pro_sdcard:
 	@rm -f config
 	@ln -sf $@ config
 	@if [ ! -e DEBIAN/ ]; then mkdir DEBIAN; fi;
