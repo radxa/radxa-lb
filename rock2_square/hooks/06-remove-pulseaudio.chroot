@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "remove unused packages"
+apt-get remove pulseaudio -y

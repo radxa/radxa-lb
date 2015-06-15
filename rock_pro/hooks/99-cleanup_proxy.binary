@@ -1,7 +1,0 @@
-#!/bin/sh  
-
-echo "I: Clean up proxy"
-echo "`pwd`"
-echo "`ls`"
-sed -i "s|172.168.1.3/||" chroot/etc/apt/sources.list
-sed -i "s|172.168.1.3/||" chroot/etc/apt/sources.list.d/*.list

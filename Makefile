@@ -41,7 +41,8 @@ BUILD_OPTIONS = \
 
 rock rock_pro rock_lite rock2_square rock_sdcard rock_pro_sdcard:
 	@rm -f config
-	@ln -sf $@ config
+	@cp -rf $@/* common_config
+	@ln -sf common_config config
 	@if [ ! -e DEBIAN/ ]; then mkdir DEBIAN; fi;
 	@cd DEBIAN && \
 	env LB_BOOTSTRAP_INCLUDE="apt-transport-https gnupg" \
@@ -73,12 +74,16 @@ clean:
 	@if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi;
 	@rm -f $(BUILD_LOG) rootfs_*.ext4
 	@rm -rf DEBIAN/config config
+	@rm -rf common_config
+	@git checkout -f common_config
 
 distclean:
 	@if [ -e DEBIAN/ ]; then cd DEBIAN/ && sudo lb clean; fi;
 	@rm -f $(BUILD_LOG) rabian_*.ext4
 	@rm -rf DEBIAN
 	@rm -rf config
+	@rm -rf common_config
+	@git checkout -f common_config
 
 help:
 	@echo " ------------------------------------------	"

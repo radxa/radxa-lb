@@ -1,7 +1,0 @@
-#!/bin/sh
-
-echo "install used packages"
-
-apt-get --reinstall install openssh-server openssh-client
-
-locale-gen
