@@ -1,8 +1,5 @@
 #!/bin/sh
 
-echo "remove unused packages"
-apt-get remove mate-power-manager -y
-
 ###ssh key gen
 ssh-keygen -t dsa -P '' -f  /etc/ssh/ssh_host_dsa_key
 ssh-keygen -t rsa -P '' -f  /etc/ssh/ssh_host_rsa_key
