@@ -2,6 +2,7 @@
 mate-core
 mate-desktop-environment
 mate-desktop-environment-extra
+mate-control-center
 lightdm
 systemd-sysv
 
