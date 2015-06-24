@@ -1,0 +1,38 @@
+<background>
+  <starttime>
+    <year>2009</year>
+    <month>08</month>
+    <day>04</day>
+    <hour>00</hour>
+    <minute>00</minute>
+    <second>00</second>
+  </starttime>
+<!-- This animation will start at midnight. -->
+  <static>
+    <duration>300.0</duration>
+    <file>/usr/share/backgrounds/cosmos/blue-marble-west.jpg</file>
+  </static>
+  <transition>
+    <duration>3.0</duration>
+    <from>/usr/share/backgrounds/cosmos/blue-marble-west.jpg</from>
+    <to>/usr/share/backgrounds/cosmos/jupiter.jpg</to>
+  </transition>
+  <static>
+    <duration>300.0</duration>
+    <file>/usr/share/backgrounds/cosmos/jupiter.jpg</file>
+  </static>
+  <transition>
+    <duration>3.0</duration>
+    <from>/usr/share/backgrounds/cosmos/jupiter.jpg</from>
+    <to>/usr/share/backgrounds/cosmos/sombrero.jpg</to>
+  </transition>
+  <static>
+    <duration>300.0</duration>
+    <file>/usr/share/backgrounds/cosmos/sombrero.jpg</file>
+  </static>
+  <transition>
+    <duration>3.0</duration>
+    <from>/usr/share/backgrounds/cosmos/sombrero.jpg</from>
+    <to>/usr/share/backgrounds/cosmos/blue-marble-west.jpg</to>
+  </transition>
+</background>
