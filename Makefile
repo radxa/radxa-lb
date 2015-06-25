@@ -59,7 +59,7 @@ rock rock_pro rock_lite rock2_square rock_sdcard rock_pro_sdcard:
 	@cp -f config/chroot DEBIAN/config
 
 	( cd DEBIAN && sudo lb build ) 2>&1 | tee $(BUILD_LOG)
-	@cp -f DEBIAN/binary/live/filesystem.ext4 ./rabian_$@_$(GIT_REV).ext4
+	@cp -f DEBIAN/binary/live/filesystem.ext4 ./rabian_$@.ext4
 
 	@rm -fr chroot/root/.bash_history
 	@rm -fr chroot/var/log/*
