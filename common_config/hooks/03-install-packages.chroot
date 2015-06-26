@@ -2,6 +2,7 @@
 
 echo "remove used packages"
 
+chown -hR rock:rock /home/rock
 apt-get --reinstall install openssh-server openssh-client
 
 locale-gen
