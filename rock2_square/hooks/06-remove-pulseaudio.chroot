@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "remove unused packages"
-dpkg -r --force-depends pulseaudio
