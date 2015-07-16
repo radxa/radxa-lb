@@ -6,3 +6,6 @@ chown -hR rock:rock /home/rock
 apt-get --reinstall install openssh-server openssh-client
 
 locale-gen
+
+#use default wallpaper
+rm -rf /usr/share/backgrounds/mate/desktop
