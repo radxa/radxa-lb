@@ -1,5 +1,5 @@
 .PHONY: lb_config lb_build clean distclean help
-.PHONY: rock rock_pro rock_lite rock2_square rock_sdcard rock_pro_sdcard
+.PHONY: rock rock_pro rock_lite rock2_square
 
 BUILD_LOG := live-build.log
 GIT_REV=$(shell git rev-parse --short HEAD)
