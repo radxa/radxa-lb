@@ -6,9 +6,6 @@ mate-control-center
 lightdm
 systemd-sysv
 
-###protocol stack
-bluez
-
 ###IPC
 python3-dbus
 python3

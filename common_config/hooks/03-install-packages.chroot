@@ -7,5 +7,7 @@ apt-get --reinstall install openssh-server openssh-client
 
 locale-gen
 
+apt-get install bluez blueman bluetooth -y
+
 #use default wallpaper
 rm -rf /usr/share/backgrounds/mate/desktop
