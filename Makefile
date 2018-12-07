@@ -11,7 +11,6 @@ GENERAL_BUILD_OPTIONS = \
 	--apt-source-archives false \
 	--archive-areas 'main contrib non-free' \
 	--bootappend-live "boot=live config hostname=rock username=rock" \
-	--bootstrap-flavour minimal \
 	--cache true \
 	--cache-indices true \
 	--cache-packages true \
